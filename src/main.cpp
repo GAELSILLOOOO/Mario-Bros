@@ -1,5 +1,19 @@
 #include <iostream>
+#include <Porcentaje.hpp>
 
 int main (){
-    std::cout<<"hola mundo"<<std::endl;
+    
+    Porcentaje foco1;
+    Porcentaje foco2;
+    Porcentaje foco3;
+
+   
+    foco1.Incrementar(10);
+    foco1.Incrementar(10);
+    foco1.Disminuir (4);
+
+        std::cout
+        <<"foco 1: "
+        <<foco1.Imprimir()
+        <<std::endl;
 }

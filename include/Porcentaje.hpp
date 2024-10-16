@@ -13,7 +13,7 @@ public:
     {
         if (numero > 100 || numero < 0)
         {
-            throw new std ::runtime_error("NUMERO FUERA DE RANGO")
+            throw new std ::runtime_error("NUMERO FUERA DE RANGO");
         }
         else
         {
@@ -23,8 +23,15 @@ public:
     ~Porcentaje() {}
     void Incrementar(int numero)
     {
+        this-> numero += numero;//incrementa la variable con la variable anterior
     }
     void Disminuir(int numero)
     {
+       this-> numero -= numero;
     }
+
+    int  Imprimir()
+    {
+     return this->numero;
+    }   
 };
