@@ -21,13 +21,14 @@ public:
     ~SerieNavidad() {}
     void Encender()
     {
-        for (auto &&f : focos)
+        for (auto &&f : focos) // listas e iteradores
         {
             f.Encender();
         }
     }
     void Imprimir()
     {
+
         for (auto &&focoActual : focos)
         {
             std::cout

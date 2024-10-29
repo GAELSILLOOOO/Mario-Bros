@@ -3,9 +3,9 @@
 int main(int argc, char const *argv[])
 {
 
-    SerieNavidad s1(10);
-    SerieNavidad s2(5);
-    SerieNavidad s3(15);
+    SerieNavidad s1(12);
+    SerieNavidad s2(4);
+    SerieNavidad s3(8);
     s1.Encender();
     s1.Imprimir();
 

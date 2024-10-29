@@ -32,6 +32,12 @@ public:
     {
         this->numero -= numero;
     }
+
+    Foco operator+(Foco p1)
+    {
+        return this->numero + p1.numero;
+    }
+
     void Encender()
     {
         this->encendido = true;
@@ -43,14 +49,15 @@ public:
 
     char Imprimir()
     {
-        {
-            if (this->encendido)
 
-                return '.';
+        if (this->encendido)
+        {
+            return '*';
         }
         else
         {
             return 'o';
         }
+        return this->encendido;
     }
-    };
+};
