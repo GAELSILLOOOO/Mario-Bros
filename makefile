@@ -13,7 +13,7 @@ ejecutar: bin/programa
 ejecutar2: bin/animacion 
 	./bin/animacion
 
-ejecutar3: bin/prueba
+ejecutar3: bin/prueba 
 	./bin/prueba
 
 clean : bin/programa
