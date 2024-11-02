@@ -1,6 +1,6 @@
-#include <ftxui/dom/elements.hpp> //programa merecedor de 10.        Nombre: Lopez Andrade Roberto Gael 
-#include <ftxui/screen/screen.hpp>// 3-F mecatronica           //  Registro: 23310295.
-#include <ftxui/screen/color.hpp>                             //      Fecha: 01/11/24.
+#include <ftxui/dom/elements.hpp>  //programa merecedor de 10.        Nombre: Lopez Andrade Roberto Gael
+#include <ftxui/screen/screen.hpp> // 3-F mecatronica           //  Registro: 23310295.
+#include <ftxui/screen/color.hpp>  //      Fecha: 01/11/24.
 #include <ftxui/screen/terminal.hpp>
 #include <iostream>
 #include <thread>
@@ -26,12 +26,13 @@ int main(int argc, char const *argv[])
         while (true) // Bucle while para mover el carro
         {
             Screen pantalla = Screen::Create(Dimension::Full(), Dimension::Full()); // Creación de pantalla
-            auto can = Canvas(200, 500); // Canvas donde se dibuja el carro
+            auto can = Canvas(200, 500);                                            // Canvas donde se dibuja el carro
 
             // Calcular la posición de las ruedas en base a 'frame'
             int rueda1_x = 20 + frame; // Rueda 1
             int rueda2_x = 40 + frame; // Rueda 2
-            if (rueda1_x > canvas_horizontal - carro_ancho) {
+            if (rueda1_x > canvas_horizontal - carro_ancho)
+            {
                 break; // Si se alcanza el final, salir del bucle
             }
 
@@ -39,7 +40,7 @@ int main(int argc, char const *argv[])
             can.DrawPointCircle(rueda1_x, 40, 5); // Rueda 1
             can.DrawPointCircle(rueda2_x, 40, 5); // Rueda 2
 
-            // Dibujo del cuerpo del carro 
+            // Dibujo del cuerpo del carro
             can.DrawPointLine(15 + frame, 35, 52 + frame, 35); // Línea base de la carrocería
             can.DrawPointLine(15 + frame, 22, 45 + frame, 22); // Techo del carro
             can.DrawPointLine(15 + frame, 35, 15 + frame, 22); // Línea delantera
@@ -64,10 +65,11 @@ int main(int argc, char const *argv[])
         std::cout << "De lo contrario presione cualquier otra tecla y presione ENTER: ";
         std::cin >> elegir;
 
-        if (elegir != 's' && elegir != 'S') {
+        if (elegir != 's' && elegir != 'S')
+        {
             break; // Salir del bucle si el usuario no quiere reiniciar
         }
     }
 
     return 0;
-}//programa merecedor de 10
+} // programa merecedor de 10
