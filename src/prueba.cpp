@@ -28,12 +28,12 @@ int main(int argc, char const *argv[])
             Screen pantalla = Screen::Create(Dimension::Full(), Dimension::Full()); // Creación de pantalla
             auto can = Canvas(200, 500);                                            // Canvas donde se dibuja el carro
 
-            // Calcular la posición de las ruedas en base a 'frame'
+            // Calcula la posición de las ruedas en base a 'frame'
             int rueda1_x = 20 + frame; // Rueda 1
             int rueda2_x = 40 + frame; // Rueda 2
             if (rueda1_x > canvas_horizontal - carro_ancho)
             {
-                break; // Si se alcanza el final, salir del bucle
+                break; // Si se alcanza el final, sale del bucle
             }
 
             // Dibujo de las ruedas del carro Formula 1
@@ -56,12 +56,12 @@ int main(int argc, char const *argv[])
             pantalla.Print();
             reset_position = pantalla.ResetPosition(true);
 
-            // Controlador de la velocidad del carro(animacion)
+            // Controla la velocidad del carro(animacion)
             std::this_thread::sleep_for(0.1s);
-            frame++; // Incrementar el frame para mover el carro
+            frame++; // Incrementa el frame para mover el carro
         }
 
-        // Preguntar al usuario si quiere reiniciar
+        // Pregunta al usuario si quiere reiniciar
         char elegir;
         std::cout << "El carro ha llegado al final. ¿Quieres reiniciar? (s o S). ";
         std::cout << "De lo contrario presione cualquier otra tecla y presione ENTER: ";
@@ -69,7 +69,7 @@ int main(int argc, char const *argv[])
 
         if (elegir != 's' && elegir != 'S')
         {
-            break; // Salir del bucle si el usuario no quiere reiniciar
+            break; // Sale del bucle si el usuario no quiere reiniciar
         }
     }
 
